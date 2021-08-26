@@ -1,3 +1,3 @@
 # Blog-Daily
 
-project made using MongoDb, Ejs and Express
+Simple Blog app made with the help of EJS, Express, and MongoDB
