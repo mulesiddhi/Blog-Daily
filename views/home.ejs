@@ -1,0 +1,24 @@
+<%-include('partials/header')-%>
+
+
+
+ <h1 class="hcontent">Home</h1>  
+<p  ><%=hcontent%></p>
+        <%  newPosts.map(function(elem) {%>
+          
+            <div class="blog-card ">
+            <div class="description">
+      <h1 class="ptitle "><%=elem.title%></h1>
+      <p> <%=elem.content.substring(0,200)%>...</p>
+      <p class="read-more">
+        <a href="/posts/<%=elem._id%>">Read More</a>
+        <form action="/delete" method="POST" class="delete">
+          <button type="submit" class="delbtn" name="deletePost" value=<%=elem._id%>> <i style=" color: tomato;" class="fas fa-trash"></i></button>
+       
+        </form>
+      </p>
+    </div>
+</div>
+      <%}) %>
+   
+<%-include('partials/footer')-%>
